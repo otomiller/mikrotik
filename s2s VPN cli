@@ -1,0 +1,5 @@
+/ip ipsec profile add dh-group=modp1024 enc-algorithm=aes-256 hash-algorithm=sha512 name=client1
+/ip ipsec peer add address=1.1.1.1(Remote Address) local-address=2.2.2.2.2(local_address) name=client1 profile=client1
+/ip ipsec proposal add auth-algorithms=sha512 enc-algorithms=aes-256-cbc name=client1
+/ip ipsec identity add peer=client1 secret=enteddsasadr-jekidadsadsa-spaceddasdsagrow-biddgdsadadger-objeasectgadsa
+/ip ipsec policy add dst-address=10.10.28.0/22(Remote Subnet) peer=client1 proposal=client1 sa-dst-address=2.2.2.2 sa-src-address=1.1.1.1 src-address=192.168.88.0/24(Local_Subnet) tunnel=yes

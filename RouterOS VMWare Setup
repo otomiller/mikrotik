@@ -1,0 +1,14 @@
+/ip address print
+
+/system license import
+
+/ip route add dst-address=0.0.0.0/0 gateway 193.176.187.1
+
+/ip route print
+
+interface set ether1
+
+add address=193.176.187.52/24 interface=ether1
+
+/ip service
+set www address=0.0.0.0/0
